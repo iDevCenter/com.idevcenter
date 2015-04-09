@@ -66,6 +66,10 @@ a:hover {
   margin: 0 auto;
 }
 
+.last {
+  margin-bottom: 0;
+}
+
 .button-primary {
   background-color: #e74c3c !important;
   border-color: #e74c3c !important;
@@ -78,4 +82,13 @@ a:hover {
 .en {
   font-family: 'Trebuchet MS';
   font-size: 1.5em;
+}
+
+.box {
+  margin-top: 15%;
+  padding: 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ddd;
 }
