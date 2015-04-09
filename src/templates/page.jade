@@ -1,0 +1,35 @@
+doctype html
+html(lang='fa')
+  head
+    meta(charset='utf-8')
+    title
+      if page.title !== 'Untitled'
+        | #{page.title} |
+      | &nbsp;iDevCenter
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    link(rel='stylesheet', href='/assets/vendor/skeleton/normalize.css')
+    link(rel='stylesheet', href='/assets/vendor/skeleton/skeleton.css')
+    link(rel='stylesheet', href='/assets/css/iransans.css')
+    link(rel='stylesheet', href='/assets/css/main.css')
+    link(rel='icon', type='image/png', href='/assets/images/favicon.png')
+  body
+    div.full-width-container#header
+      div.container
+        div.row
+          div.six.columns(style='text-align: left')
+            a#logo(href='/')
+              img(src='/assets/images/logotype.svg')
+          div.six.columns
+            span#tagline جامعه مجازی برنامه‌نویسان فارسی زبان
+
+  block content
+    != page.html
+
+  div#footer
+      div.container
+        div.row
+          div.twelve.columns
+            | ساخته شده با
+            span(style='color: #e74c3c;') &nbsp;&hearts;&nbsp;
+            | در تهران. از سال ۱۳۸۱ تا امروز.
