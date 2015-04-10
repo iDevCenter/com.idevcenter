@@ -6,6 +6,8 @@ html(lang='fa')
       if page.title !== 'Untitled'
         | #{page.title} |
       | &nbsp;iDevCenter
+    if page.metadata.redirect
+      meta(http-equiv='refresh', content='0; url=#{page.metadata.redirect}')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(http-equiv='X-UA-Compatible', content='IE=Edge')
     link(rel='stylesheet', href='/assets/vendor/skeleton/normalize.css')
