@@ -1,3 +1,7 @@
 #!/usr/bin/env sh
 
-wintersmith build --chdir src --locals locals.release.json --clean --output ../build
+echo "Building site..."
+
+wintersmith build --quiet --chdir src --locals locals.release.json --clean --output ../build
+
+echo "Building site done."

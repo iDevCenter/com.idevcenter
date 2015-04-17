@@ -1,15 +1,25 @@
 #!/usr/bin/env sh
 
-TEMPDIR=$(mktemp -d -t idc)
+./build.sh
 
+echo "Deploying site..."
+
+echo "  Creating temp directory..."
+
+TEMPDIR=$(mktemp -d -t idc)
 cp -r build/ $TEMPDIR
 
-pushd $TEMPDIR
+pushd $TEMPDIR > /dev/null
 
-git init
-git add .
-git commit --message "Release"
-git remote add origin git@github.com:iDevCenter/idevcenter.github.io.git
-git push --force --set-upstream origin master
+echo "  Initializing repository..."
+git init --quiet
+git add . > /dev/null
+git commit --quiet --message "Release" > /dev/null
+git remote add origin git@github.com:iDevCenter/idevcenter.github.io.git > /dev/null
 
-popd
+echo "  Pushing repository..."
+git push --quiet --force --set-upstream origin master > /dev/null
+
+popd > /dev/null
+
+echo "Deploying site done."
