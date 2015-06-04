@@ -23,6 +23,7 @@ app.use(cookieParser());
 
 app.use(favicon(__dirname + '/static/assets/images/favicon.png'));
 app.use('/newsletter', require('./routes/newsletter'));
+app.use('/slack', require('./routes/slack'));
 app.use('/', express.static(path.join(__dirname, 'static')));
 app.use('/', require('./routes/index'));
 

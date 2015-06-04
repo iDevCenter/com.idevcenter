@@ -1,0 +1,14 @@
+extends ../page
+
+block content
+  .container
+    .row
+      .two.columns &nbsp;
+      .eight.columns.box
+        h5 گروه اسلک
+        if error === 'invalid_email'
+          p.last آدرس ایمیلی که وارد کرده‌اید اشتباه است.
+        if error === 'already_in_team'
+          p.last شما در حال حاضر عضو گروه هستید.
+        if error === 'already_invited' || error === 'sent_recently'
+          p.last دعوتنامه عضویت در گروه قبلا برای شما ارسال شده است.
