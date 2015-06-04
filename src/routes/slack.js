@@ -2,14 +2,10 @@ var router = require('express').Router();
 var req = require('request');
 
 router.get('/', function(request, response, next) {
-  response.redirect('/');
+  response.render('slack/index');
 });
 
-router.get('/invite', function(request, response, next) {
-  response.redirect('/');
-});
-
-router.post('/invite', function(request, response, next) {
+router.post('/', function(request, response, next) {
   var url = url;
   var form = {
     email: request.param('EMAIL'),
@@ -26,7 +22,7 @@ router.post('/invite', function(request, response, next) {
     body = JSON.parse(body);
 
     if (!body.ok) {
-      response.render('slack/invite', { error: body.error });
+      response.render('slack/index', { error: body.error });
       return;
     }
 

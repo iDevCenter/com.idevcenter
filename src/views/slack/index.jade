@@ -1,0 +1,36 @@
+extends ../page
+
+block content
+  div.container
+    div.row
+      div.six.columns
+        div
+          h4 گروه اسلک
+          p گروه اسلک <span class='en'>iDevCenter</span> مکانی است برای صحبت و گفتگو درباره مسائل مختلف مربوط به برنامه‌نویسی و کمک به رفع مشکلاتی که هنگام توسعه نرم‌افزار به آنها برخورد می‌کنیم.
+          br
+          div این گروه در آدرس <a href='https://idevcenter.slack.com' class='en'>idevcenter.slack.com</a> قرار دارد و علاوه بر آن از اپ‌های <a href='https://itunes.apple.com/app/slack-app/id618783545?ls=1&mt=8'>آیفون</a>، <a href='https://play.google.com/store/apps/details?id=com.Slack'>اندروید</a>، <a href='https://idevcenter.slack.com/ssb/download-win'>ویندوز</a> و <a href='https://itunes.apple.com/app/slack/id803453959?ls=1&mt=12'>مک</a> آن نیز می‌توانید استفاده کنید.
+
+      div.one.columns
+        span &nbsp;
+
+      div.five.columns(style='margin-top: 61px;')
+        div
+          if error
+            div(style='border-right: 4px solid #e74c3c; padding: 3px 10px;')
+              if error === 'invalid_email'
+                span آدرس ایمیلی که وارد کرده‌اید اشتباه است.
+              if error === 'already_in_team'
+                span شما در حال حاضر عضو گروه هستید.
+              if error === 'already_invited' || error === 'sent_recently'
+                span دعوتنامه عضویت در گروه قبلا برای شما ارسال شده است.
+            br
+            br
+
+          p برای عضویت در این گروه آدرس ایمیل خود را وارد کنید:
+
+          form.last(action="/slack", method="post")
+            div.row.ltr
+              input.u-full-width.en(name="EMAIL", type='email', placeholder='you@domain.com')
+            div(style='position: absolute; top: -5000px;')
+              input(type='text', name='b_86a5c2813f59c8e43d471b5eb_621e10fdc0', tabindex='-1', value='')
+            input.button-primary.last(type='submit', value='عضویت')

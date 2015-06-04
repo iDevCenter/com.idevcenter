@@ -1,7 +1,7 @@
 var router = require('express').Router();
 
 router.get('/', function(request, response, next) {
-  response.redirect('/');
+  response.render('newsletter/index');
 });
 
 router.get('/confirm', function(request, response, next) {

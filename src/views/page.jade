@@ -1,19 +1,27 @@
 extends layout
 
 block body
-  div#content-wrap
-    div#content
+  div#page-wrap
+    div#page
       div#header
         div.container
           div.row
             div.six.columns
-              a#logo(href='/')
-                span#tagline جامعه توسعه‌دهندگان فارسی زبان
+              ul#menu
+                li
+                  a(href='/') خانه
+                li
+                  a(href='/newsletter') خبرنامه
+                li
+                  a(href='/slack') گروه اسلک
+
             div.six.columns(style='text-align: left')
               a#logo(href='/')
                 img(src='/assets/images/logotype.svg')
+                span#tagline جامعه توسعه‌دهندگان فارسی‌زبان
 
-      block content
+      div#content
+        block content
 
   div#footer-wrap
     div.container#footer

@@ -2,72 +2,45 @@ extends layout
 
 block head
   style.
-    .section {
-      margin-bottom: 100px;
+    #header {
+      border-bottom: none;
+    }
+
+    #header #logo {
+      float: none;
+    }
+
+    #header #logo img {
+      height: 40px;
     }
 
 block body
-  div#content-wrap
-    div#content
-      div.row.center(style='margin-top: 100px; margin-bottom: 100px;')
-        div
+  div#page-wrap
+    div#page
+      div.container#header
+        div.row.center(style='padding-top: 100px;')
           a#logo(href='/')
-            img(src='/assets/images/logotype.svg' style='width: 300px;')
+            img(src='/assets/images/logotype.svg')
+            span#tagline جامعه توسعه‌دهندگان فارسی‌زبان
 
-        div(style='center; color: #666; margin-top: 10px;')
-          span#tagline جامعه توسعه‌دهندگان فارسی زبان
+      div#content
+        div.container
+          div.row
+            div.one.columns.center
+              span &nbsp;
 
-      div.row.section
-        div.two.columns
-          span &nbsp;
+            div.four.columns.center
+              h5
+                a(href='/newsletter') خبرنامه
+              p خبرنامه‌ <span class='en'>iDevCenter</span> هر دو هفته یکبار صبح جمعه به آدرس ایمیل شما ارسال می‌شود و حاوی مطالب گوناگون و مفیدی در زمینه توسعه نرم‌افزار است که به شما کمک می‌کند برنامه‌نویس بهتری بشوید.
 
-        div.four.columns
-          div
-            h5 خبرنامه
-            p خبرنامه‌ <span class='en'>iDevCenter</span> هر دو هفته یکبار صبح جمعه به آدرس ایمیل شما ارسال می‌شود و حاوی مطالب گوناگون و مفیدی در زمینه توسعه نرم‌افزار است که به شما کمک می‌کند برنامه‌نویس بهتری بشوید.
-            br
+            div.two.columns.center
+              span &nbsp;
 
-          div
-            h6.black شماره‌های پیشین:
-            ul.last
-              li
-                a(href="/newsletter/archive/4" class='black') شماره ۴ &ndash; ۸ خرداد ۱۳۹۴
-              li
-                a(href="/newsletter/archive/3" class='black') شماره ۳ &ndash; ۲۹ اردیبهشت ۱۳۹۴
-              li
-                a(href="/newsletter/archive/2" class='black') شماره ۲ &ndash; ۱۱ اردیبهشت ۱۳۹۴
-              li
-                a(href="/newsletter/archive/1" class='black') شماره ۱ &ndash; ۲۸ فروردین ۱۳۹۴
-
-        div.four.columns(style='margin-top: 58px; padding-right: 50px;')
-          p برای عضویت در این خبرنامه آدرس ایمیل خود را وارد کنید:
-          form.last(action="//idevcenter.us10.list-manage.com/subscribe/post?u=86a5c2813f59c8e43d471b5eb&amp;id=621e10fdc0", method="post")
-            div.row.ltr
-              input.u-full-width.en(name="EMAIL", type='email', placeholder='you@domain.com')
-            div(style='position: absolute; top: -5000px;')
-              input(type='text', name='b_86a5c2813f59c8e43d471b5eb_621e10fdc0', tabindex='-1', value='')
-            input.button-primary.last(type='submit', value='عضویت')
-
-      div.row.section.last
-        div.two.columns
-          span &nbsp;
-
-        div.four.columns
-          div
-            h5 گروه اسلک
-            p گروه اسلک <span class='en'>iDevCenter</span> مکانی است برای صحبت و گفتگو درباره مسائل مختلف مربوط به برنامه‌نویسی و کمک به رفع مشکلاتی که هنگام توسعه نرم‌افزار به آنها برخورد می‌کنیم.
-            br
-            div علاوه بر نسخه وب این گروه که در آدرس <a href='https://idevcenter.slack.com' class='en'>idevcenter.slack.com</a> قرار دارد، می‌توانید از اپ‌های <a href='https://itunes.apple.com/app/slack-app/id618783545?ls=1&mt=8'>آیفون</a>، <a href='https://play.google.com/store/apps/details?id=com.Slack'>اندروید</a>، <a href='https://idevcenter.slack.com/ssb/download-win'>ویندوز</a> و <a href='https://itunes.apple.com/app/slack/id803453959?ls=1&mt=12'>مک</a> آن نیز استفاده کنید.
-
-        div.four.columns(style='margin-top: 58px; padding-right: 50px;')
-          div
-            p برای عضویت در این گروه آدرس ایمیل خود را وارد کنید:
-            form.last(action="/slack/invite", method="post")
-              div.row.ltr
-                input.u-full-width.en(name="EMAIL", type='email', placeholder='you@domain.com')
-              div(style='position: absolute; top: -5000px;')
-                input(type='text', name='b_86a5c2813f59c8e43d471b5eb_621e10fdc0', tabindex='-1', value='')
-              input.button-primary.last(type='submit', value='عضویت')
+            div.four.columns.center
+              h5
+                a(href='/slack') گروه اسلک
+              p گروه اسلک <span class='en'>iDevCenter</span> مکانی است برای صحبت و گفتگو درباره مسائل مختلف مربوط به برنامه‌نویسی و کمک به رفع مشکلاتی که هنگام توسعه نرم‌افزار به آنها برخورد می‌کنیم.
 
   div#footer-wrap
     div.container#footer

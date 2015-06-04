@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #e74c3c;
 }
 
-h1.black, h2.black, h3.black, h4.black, h5.black, h6.black {
+h1.plain, h2.plain, h3.plain, h4.plain, h5.plain, h6.plain {
   color: #222;
 }
 
@@ -32,11 +32,11 @@ a:hover {
   color: #e74c3c;
 }
 
-a.black {
+a.plain {
   color: #222;
 }
 
-a.black:hover {
+a.plain:hover {
   color: #e74c3c;
 }
 
@@ -46,16 +46,11 @@ ul li {
 }
 
 input[type='email']:focus {
-  border: 1px solid #e74c3c;
+  border: 1px solid #aaa;
 }
 
 input.button-primary {
-  background-color: #fff !important;
-  border-color: #d1d1d1 !important;
-  color: #444 !important;
-}
-
-input.button-primary:hover {
+  background-color: #e74c3c !important;
   border-color: #e74c3c !important;
 }
 
@@ -85,12 +80,12 @@ input.button-primary:hover {
   border-color: #ddd;
 }
 
-#content-wrap {
+#page-wrap {
   min-height: 100%;
   margin-bottom: -40px;
 }
 
-#content-wrap:after {
+#page-wrap:after {
   content: '';
   display: block;
   height: 40px;
@@ -107,6 +102,8 @@ input.button-primary:hover {
 #header #logo {
   display: block;
   text-decoration: none;
+  text-align: center;
+  float: left;
 }
 
 #header #logo img {
@@ -115,9 +112,27 @@ input.button-primary:hover {
 
 #header #tagline {
   display: block;
-  float: right;
   line-height: 35px;
   color: #666;
+}
+
+#header #menu {
+  padding-top: 40px;
+  margin-bottom: 0;
+}
+
+#header #menu li {
+  display: inline;
+}
+
+#header #menu li a {
+  color: #333;
+  margin-left: 20px;
+}
+
+#content {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 #footer-wrap {
