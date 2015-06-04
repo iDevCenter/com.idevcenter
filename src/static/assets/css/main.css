@@ -1,12 +1,21 @@
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   direction: rtl;
-  line-height: 21px;
-  font-family: iransans-web;
+  line-height: 22px;
+  font-family: 'iransans-web';
   font-size: 11px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #e74c3c
+  color: #e74c3c;
 }
 
 a {
@@ -14,13 +23,73 @@ a {
   color: #e74c3c;
 }
 
-input[type="email"]:focus {
-  border: 1px solid #f7bcac;
-}
-
 a:hover {
   text-decoration: underline;
   color: #e74c3c;
+}
+
+a.black {
+  color: #222;
+}
+
+a.black:hover {
+  color: #e74c3c;
+}
+
+ul li {
+  margin-bottom: .3em;
+  list-style-type: disc;
+}
+
+input[type='email']:focus {
+  border: 1px solid #e74c3c;
+}
+
+input.button-primary {
+  background-color: #fff !important;
+  border-color: #d1d1d1 !important;
+  color: #444 !important;
+}
+
+input.button-primary:hover {
+  border-color: #e74c3c !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.last {
+  margin-bottom: 0;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.en {
+  font-family: 'Trebuchet MS';
+  font-size: 1.2em;
+}
+
+.box {
+  margin-top: 15%;
+  padding: 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ddd;
+}
+
+#content-wrap {
+  min-height: 100%;
+  margin-bottom: -40px;
+}
+
+#content-wrap:after {
+  content: '';
+  display: block;
+  height: 40px;
 }
 
 #header {
@@ -47,48 +116,14 @@ a:hover {
   color: #666;
 }
 
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 30px;
-  padding-top: 10px;
+#footer-wrap {
+  height: 40px;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #eee;
+}
+
+#footer {
+  padding-top: 8px;
   font-size: 9px;
-}
-
-.full-width-container {
-  clear: both;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.last {
-  margin-bottom: 0;
-}
-
-.button-primary {
-  background-color: #e74c3c !important;
-  border-color: #e74c3c !important;
-}
-
-.ltr {
-  direction: ltr;
-}
-
-.en {
-  font-family: 'Trebuchet MS';
-  font-size: 1.5em;
-}
-
-.box {
-  margin-top: 15%;
-  padding: 20px;
-  border-radius: 10px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ddd;
 }

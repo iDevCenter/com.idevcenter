@@ -1,0 +1,24 @@
+extends layout
+
+block body
+  div#content-wrap
+    div#content
+      div#header
+        div.container
+          div.row
+            div.six.columns
+              a#logo(href='/')
+                span#tagline جامعه توسعه‌دهندگان فارسی زبان
+            div.six.columns(style='text-align: left')
+              a#logo(href='/')
+                img(src='/assets/images/logotype.svg')
+
+      block content
+
+  div#footer-wrap
+    div.container#footer
+      div.row
+        div.twelve.columns
+          | ساخته شده با
+          span(style='color: #e74c3c;') &nbsp;&hearts;&nbsp;
+          | در تهران از سال ۱۳۸۱ تا امروز.

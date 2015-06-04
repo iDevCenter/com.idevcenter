@@ -1,1 +1,63 @@
 extends layout
+
+block head
+  style.
+    .section {
+      padding-top: 55px;
+      padding-bottom: 55px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .section.last {
+      border-bottom: none;
+    }
+
+block body
+  div#content-wrap
+    div#content
+      div.row.center(style='margin-top: 100px; margin-bottom: 20px;')
+        div
+          a#logo(href='/')
+            img(src='/assets/images/logotype.svg' style='width: 300px;')
+
+        div(style='center; color: #666; margin-top: 10px;')
+          span#tagline جامعه توسعه‌دهندگان فارسی زبان
+
+      div.row.section.last
+        div.two.columns
+          span &nbsp;
+
+        div.four.columns
+          div
+            h5 خبرنامه
+            p خبرنامه‌ <span class='en'>iDevCenter</span> هر دو هفته یکبار صبح جمعه به آدرس ایمیل شما ارسال می‌شود و حاوی مطالب گوناگون و مفیدی در زمینه توسعه نرم‌افزار است که به شما کمک می‌کند برنامه‌نویس بهتری بشوید.
+            br
+
+          div
+            h6 شماره‌های پیشین:
+            ul.last
+              li
+                a(href="/newsletter/archive/4" class='black') شماره ۴ &ndash; ۸ خرداد ۱۳۹۴
+              li
+                a(href="/newsletter/archive/3" class='black') شماره ۳ &ndash; ۲۹ اردیبهشت ۱۳۹۴
+              li
+                a(href="/newsletter/archive/2" class='black') شماره ۲ &ndash; ۱۱ اردیبهشت ۱۳۹۴
+              li
+                a(href="/newsletter/archive/1" class='black') شماره ۱ &ndash; ۲۸ فروردین ۱۳۹۴
+
+        div.four.columns(style='margin-top: 58px; padding-right: 50px;')
+          p برای عضویت در این خبرنامه آدرس ایمیل خود را وارد کنید:
+          form.last(action="//idevcenter.us10.list-manage.com/subscribe/post?u=86a5c2813f59c8e43d471b5eb&amp;id=621e10fdc0", method="post")
+            div.row.ltr
+              input.u-full-width.en(name="EMAIL", type='email', placeholder='you@domain.com')
+            div(style='position: absolute; top: -5000px;')
+              input(type='text', name='b_86a5c2813f59c8e43d471b5eb_621e10fdc0', tabindex='-1', value='')
+            input.button-primary.last(type='submit', value='عضویت')
+
+  div#footer-wrap
+    div.container#footer
+      div.row
+        div.twelve.columns
+          | ساخته شده با
+          span(style='color: #e74c3c;') &nbsp;&hearts;&nbsp;
+          | در تهران از سال ۱۳۸۱ تا امروز.

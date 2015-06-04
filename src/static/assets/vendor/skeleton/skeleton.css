@@ -38,7 +38,7 @@
 .column,
 .columns {
   width: 100%;
-  float: left;
+  float: right;
   box-sizing: border-box; }
 
 /* For devices larger than 400px */
@@ -54,10 +54,10 @@
     width: 80%; }
   .column,
   .columns {
-    margin-left: 4%; }
+    margin-right: 4%; }
   .column:first-child,
   .columns:first-child {
-    margin-left: 0; }
+    margin-right: 0; }
 
   .one.column,
   .one.columns                    { width: 4.66666666667%; }
@@ -71,7 +71,7 @@
   .nine.columns                   { width: 74.0%;          }
   .ten.columns                    { width: 82.6666666667%; }
   .eleven.columns                 { width: 91.3333333333%; }
-  .twelve.columns                 { width: 100%; margin-left: 0; }
+  .twelve.columns                 { width: 100%; margin-right: 0; }
 
   .one-third.column               { width: 30.6666666667%; }
   .two-thirds.column              { width: 65.3333333333%; }
@@ -80,35 +80,35 @@
 
   /* Offsets */
   .offset-by-one.column,
-  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-one.columns          { margin-right: 8.66666666667%; }
   .offset-by-two.column,
-  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-two.columns          { margin-right: 17.3333333333%; }
   .offset-by-three.column,
-  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-three.columns        { margin-right: 26%;            }
   .offset-by-four.column,
-  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-four.columns         { margin-right: 34.6666666667%; }
   .offset-by-five.column,
-  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-five.columns         { margin-right: 43.3333333333%; }
   .offset-by-six.column,
-  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-six.columns          { margin-right: 52%;            }
   .offset-by-seven.column,
-  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-seven.columns        { margin-right: 60.6666666667%; }
   .offset-by-eight.column,
-  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-eight.columns        { margin-right: 69.3333333333%; }
   .offset-by-nine.column,
-  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-nine.columns         { margin-right: 78.0%;          }
   .offset-by-ten.column,
-  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-ten.columns          { margin-right: 86.6666666667%; }
   .offset-by-eleven.column,
-  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+  .offset-by-eleven.columns       { margin-right: 95.3333333333%; }
 
   .offset-by-one-third.column,
-  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-one-third.columns    { margin-right: 34.6666666667%; }
   .offset-by-two-thirds.column,
-  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+  .offset-by-two-thirds.columns   { margin-right: 69.3333333333%; }
 
   .offset-by-one-half.column,
-  .offset-by-one-half.columns     { margin-left: 52%; }
+  .offset-by-one-half.columns     { margin-right: 52%; }
 
 }
 
@@ -120,7 +120,7 @@ html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
-body {
+body {direction:rtl;
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
@@ -281,7 +281,7 @@ input[type="radio"] {
   display: inline; }
 label > .label-body {
   display: inline-block;
-  margin-left: .5rem;
+  margin-right: .5rem;
   font-weight: normal; }
 
 
@@ -292,13 +292,13 @@ ul {
 ol {
   list-style: decimal inside; }
 ol, ul {
-  padding-left: 0;
+  padding-right: 0;
   margin-top: 0; }
 ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
+  margin: 1.5rem 3rem 1.5rem 0;
   font-size: 90%; }
 li {
   margin-bottom: 1rem; }
@@ -325,14 +325,14 @@ pre > code {
 th,
 td {
   padding: 12px 15px;
-  text-align: left;
+  text-align: right;
   border-bottom: 1px solid #E1E1E1; }
 th:first-child,
 td:first-child {
-  padding-left: 0; }
+  padding-right: 0; }
 th:last-child,
 td:last-child {
-  padding-right: 0; }
+  padding-left: 0; }
 
 
 /* Spacing
@@ -365,10 +365,10 @@ form {
 .u-max-full-width {
   max-width: 100%;
   box-sizing: border-box; }
-.u-pull-right {
-  float: right; }
 .u-pull-left {
   float: left; }
+.u-pull-right {
+  float: right; }
 
 
 /* Misc
