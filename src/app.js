@@ -27,9 +27,7 @@ app.use('/', express.static(path.join(__dirname, 'static')));
 app.use('/', require('./routes/index'));
 
 app.use(function(request, response, next) {
-  var error = new Error('Not Found');
-  error.status = 404;
-  next(error);
+  response.status(404).render('404');
 });
 
 app.use(function(error, request, response, next) {

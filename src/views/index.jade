@@ -3,19 +3,13 @@ extends layout
 block head
   style.
     .section {
-      padding-top: 55px;
-      padding-bottom: 55px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .section.last {
-      border-bottom: none;
+      margin-bottom: 100px;
     }
 
 block body
   div#content-wrap
     div#content
-      div.row.center(style='margin-top: 100px; margin-bottom: 20px;')
+      div.row.center(style='margin-top: 100px; margin-bottom: 100px;')
         div
           a#logo(href='/')
             img(src='/assets/images/logotype.svg' style='width: 300px;')
@@ -23,7 +17,7 @@ block body
         div(style='center; color: #666; margin-top: 10px;')
           span#tagline جامعه توسعه‌دهندگان فارسی زبان
 
-      div.row.section.last
+      div.row.section
         div.two.columns
           span &nbsp;
 
@@ -34,7 +28,7 @@ block body
             br
 
           div
-            h6 شماره‌های پیشین:
+            h6.black شماره‌های پیشین:
             ul.last
               li
                 a(href="/newsletter/archive/4" class='black') شماره ۴ &ndash; ۸ خرداد ۱۳۹۴

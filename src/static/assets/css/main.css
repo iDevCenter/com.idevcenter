@@ -18,6 +18,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #e74c3c;
 }
 
+h1.black, h2.black, h3.black, h4.black, h5.black, h6.black {
+  color: #222;
+}
+
 a {
   text-decoration: none;
   color: #e74c3c;
