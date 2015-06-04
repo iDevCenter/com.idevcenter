@@ -12,7 +12,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-fs.readFile('locals.json', function(error, data) {
+fs.readFile(path.join(__dirname, 'locals.json'), function(error, data) {
   app.locals = !error ? JSON.parse(data) : {};
 });
 
