@@ -15,14 +15,9 @@ block content
         div
           h6.plain شماره‌های پیشین:
           ul.last
-            li
-              a(href="/newsletter/archive/4" class='plain') شماره ۴ &ndash; ۸ خرداد ۱۳۹۴
-            li
-              a(href="/newsletter/archive/3" class='plain') شماره ۳ &ndash; ۲۹ اردیبهشت ۱۳۹۴
-            li
-              a(href="/newsletter/archive/2" class='plain') شماره ۲ &ndash; ۱۱ اردیبهشت ۱۳۹۴
-            li
-              a(href="/newsletter/archive/1" class='plain') شماره ۱ &ndash; ۲۸ فروردین ۱۳۹۴
+            each newsletter in newsletters.slice().reverse()
+              li
+                a(href="/newsletter/archive/#{newsletter.issue}" class='plain') #{newsletter.title} &ndash; #{newsletter.date}
 
       div.one.columns
         span &nbsp;

@@ -1,7 +1,10 @@
 var router = require('express').Router();
+var DB = require('../db');
 
 router.get('/', function(request, response, next) {
-  response.render('newsletter/index');
+  var db = new DB();
+
+  response.render('newsletter/index', { newsletters: db.getNewsletters() });
 });
 
 router.get('/confirm', function(request, response, next) {
