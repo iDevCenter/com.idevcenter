@@ -7,6 +7,10 @@ router.get('/', function(request, response, next) {
   response.render('newsletter/index', { newsletters: db.getNewsletters() });
 });
 
+router.get('/archive/:issue', function(request, response, next) {
+  response.sendFile('newsletter/' + request.param('issue') + '.html', { root: '../db'});
+});
+
 router.get('/confirm', function(request, response, next) {
   response.render('newsletter/confirm');
 });
